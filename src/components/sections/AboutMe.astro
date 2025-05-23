@@ -2,14 +2,19 @@
 import ContainerCenter from "@components/ContainerCenter.astro";
 import { Image } from "astro:assets";
 import señoritaAniversario from "@assets/aboutMe/señorita.jpg";
+import linea from "@assets/aboutMe/info-b-vector.svg";
 ---
 
 <section
-  class="w-full flex items-start justify-center tablet:h-[50vh] my-12 bg-cover bg-no-repeat bg-center"
-  style="background-image: url('/src/assets/aboutMe/info-b-vector.svg');"
+  class="relative w-full flex items-start justify-center tablet:h-[50vh] my-12 laptop:h-auto"
 >
+  <Image
+    src={linea}
+    alt="Foto y Video Gaby"
+    class="absolute top-0 left-0 w-full h-full object-cover object-center"
+  />
   <ContainerCenter
-    class="w-full h-full flex flex-col items-center justify-center p-0 tablet:flex-row"
+    class="w-full h-full flex flex-col items-center justify-center p-0 tablet:flex-row laptop:py-8"
   >
     <aside
       class="w-full relative flex justify-center items-center py-6 phone-lg:justify-end tablet:py-0 tablet:w-[45%] tablet:h-full"
@@ -17,25 +22,25 @@ import señoritaAniversario from "@assets/aboutMe/señorita.jpg";
       <Image
         src={señoritaAniversario}
         alt="Foto y Video Gaby"
-        class="relative z-50 w-[90%] h-[30rem] rounded-sm object-cover object-center phone-lg:w-3/5 phone-lg:mr-8 phone-lg:h-[23rem] tablet:w-[75%] tablet:h-[22rem] tablet:mr-4"
+        class="relative z-50 w-[90%] h-[30rem] rounded-sm object-cover object-center phone-lg:w-3/5 phone-lg:mr-8 phone-lg:h-[23rem] tablet:w-[75%] tablet:h-[22rem] tablet:mr-4 laptop:w-[70%] laptop:h-[38rem]"
       />
       <div
-        class="z-10 absolute bottom-0 left-0 bg-white-gray w-[90%] h-[90%] rounded-sm phone-lg:w-[95%] tablet:w-full tablet:h-1/2"
+        class="z-10 absolute bottom-0 left-0 bg-white-gray w-[90%] h-[90%] rounded-sm phone-lg:w-[95%] tablet:w-full tablet:h-1/2 laptop:-bottom-8 laptop:left-28 laptop:w-[80%] laptop:h-[90%]"
       >
       </div>
     </aside>
     <aside
-      class="w-full flex flex-col items-start justify-center text-start gap-4 px-6 phone-lg:p-8 tablet:px-8 tablet:w-[55%] tablet:h-full tablet:gap-0 tablet:p-0 tablet:justify-between"
+      class="w-full flex flex-col items-start justify-center text-start gap-4 px-6 phone-lg:p-8 tablet:px-8 tablet:w-[55%] tablet:h-full tablet:gap-0 tablet:p-0 tablet:justify-between laptop:gap-6"
     >
       <h5 class="text-gold">Halachó, Yucatán. México</h5>
       <h2 class="text-gold font-semibold text-xl">¡Hola! Soy📸Gaby</h2>
-      <p class="text-gray-muted-50 w-full prose-sm">
+      <p class="text-gray-muted-50 w-full prose-sm laptop:prose">
         En Foto y Video Gaby nos especializamos en capturar emociones auténticas
         y momentos reales que cuentan tu historia de forma natural y artística.
         Nuestro estilo combina lo documental con lo elegante, para que cada
         imagen refleje tu esencia tal y como eres.
       </p>
-      <p class="text-gray-muted-50 w-full prose-sm">
+      <p class="text-gray-muted-50 w-full prose-sm laptop:prose">
         Ya sea una ceremonia íntima o una gran celebración, nos comprometemos a
         crear recuerdos que te acompañen toda la vida. Nos encanta trabajar en
         un ambiente relajado y cercano, para que tú solo disfrutes el momento
