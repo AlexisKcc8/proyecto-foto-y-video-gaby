@@ -1,0 +1,78 @@
+---
+import { backgroundsHero } from "@data/dataHero";
+import { Image } from "astro:assets";
+---
+
+<section class="relative w-full h-screen overflow-hidden">
+  <!-- Carousel con imágenes que hacen fade -->
+  <div class="absolute inset-0 z-0 w-full h-full overflow-hidden">
+    {
+      backgroundsHero.map((img, index) => (
+        <Image
+          src={img.urlImage}
+          alt={`Slide ${index + 1}`}
+          class={`absolute top-0 left-0 w-full h-full object-cover border-none object-center opacity-0 animate-fade-${index}`}
+          style={`animation-delay: ${index * 5}s`}
+        />
+      ))
+    }
+    <div
+      class="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-white/60 to-transparent pointer-events-none z-10 tablet:w-48"
+    >
+    </div>
+    <div
+      class="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-white/60 to-transparent pointer-events-none z-10 tablet:w-48"
+    >
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div
+    class="relative bottom-0 w-full h-full z-20 flex flex-col justify-end items-center text-center px-4 py-8 bg-gradient-to-t from-white/100 to-transparent"
+  >
+    <h1 class="text-4xl text-text md:text-6xl font-extrabold drop-shadow-lg">
+      Foto y video Gaby
+    </h1>
+    <p class="mt-4 text-gray-muted text-lg md:text-2xl drop-shadow-md prose">
+      "Porque cada instante cuenta, inmortalízalo con nosotros"
+    </p>
+    <a
+      href="#contacto"
+      class="mt-6 bg-gold text-white py-4 px-8 rounded-md hover:bg-gold-hover transition font-medium uppercase"
+    >
+      Agenda tu sesión hoy
+    </a>
+  </div>
+</section>
+<!-- Estilos de animación fade -->
+<style>
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-fade-0 {
+    animation: fade 15s infinite;
+  }
+  .animate-fade-1 {
+    animation: fade 15s infinite;
+    animation-delay: 5s;
+  }
+  .animate-fade-2 {
+    animation: fade 15s infinite;
+    animation-delay: 10s;
+  }
+</style>
