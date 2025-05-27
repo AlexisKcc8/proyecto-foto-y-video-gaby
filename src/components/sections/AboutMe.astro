@@ -1,17 +1,17 @@
 ---
 import ContainerCenter from "@components/ContainerCenter.astro";
 import { Image } from "astro:assets";
-import señoritaAniversario from "@assets/aboutMe/señorita.jpg";
+import señoritaAniversario from "@assets/aboutMe/señorita.webp";
 import linea from "@assets/aboutMe/info-b-vector.svg";
 ---
 
 <section
-  class="relative w-full flex items-start justify-center tablet:h-[50vh] my-12 laptop:h-auto"
+  class="relative w-full flex items-start justify-center tablet:h-[50vh] laptop:h-auto"
 >
   <Image
     src={linea}
     alt="Foto y Video Gaby"
-    class="absolute top-0 left-0 w-full h-full object-cover object-center"
+    class="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
   />
   <ContainerCenter
     class="w-full h-full flex flex-col items-center justify-center p-0 tablet:flex-row laptop:py-8"
@@ -52,7 +52,7 @@ import linea from "@assets/aboutMe/info-b-vector.svg";
       </p>
       <a
         href="#"
-        class="bg-cinnamon text-white py-4 px-8 rounded-md font-medium laptop:mx-5"
+        class="bg-cinnamon text-white py-4 px-8 rounded-md font-medium z-30 transition laptop:mx-5 hover:cursor-pointer hover:bg-gold-hover"
         >Nuestro Facebook</a
       >
     </aside>

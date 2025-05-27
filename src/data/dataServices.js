@@ -1,9 +1,9 @@
-import SesionesFotográficas from "@assets/our-services/Sesiones-fotográficas-individuales.jpg";
-import CoberturaEventos from "@assets/our-services/Cobertura-eventos.jpg";
-import ProducciónVideo from "@assets/our-services/Producción-video.jpg";
-import FotografíaDocumentos from "@assets/our-services/Fotografía-documentos.jpg";
-import formatosDigitales from "@assets/our-services/formatos-digitales.jpg";
-import ImpresiónFotos from "@assets/our-services/Impresión-fotos.jpg";
+import SesionesFotográficas from "@assets/our-services/Sesiones-fotográficas.webp";
+import CoberturaEventos from "@assets/our-services/Cobertura-eventos.webp";
+import ProducciónVideo from "@assets/our-services/Producción-video.webp";
+import FotografíaDocumentos from "@assets/our-services/Fotografía-documentos.webp";
+import formatosDigitales from "@assets/our-services/formatos-digitales.webp";
+import ImpresiónFotos from "@assets/our-services/Impresión-fotos.webp";
 
 export const ourServices = [
   {

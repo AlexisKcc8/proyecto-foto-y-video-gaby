@@ -1,6 +1,6 @@
-import misXV from "@assets/hero/mis-xv.jpg";
-import señoritaHalacho from "@assets/hero/señorita-halacho.jpg";
-import boda from "@assets/hero/boda.jpg";
+import misXV from "@assets/hero/mis-xv.webp";
+import señoritaHalacho from "@assets/hero/señorita-halacho.webp";
+import boda from "@assets/hero/boda.webp";
 export const backgroundsHero = [
   {
     id: crypto.randomUUID(),
