@@ -1,0 +1,38 @@
+---
+import ContainerCenter from "@components/ContainerCenter.astro";
+import { ourServices } from "@data/dataServices.js";
+import { Image } from "astro:assets";
+---
+
+<section class="py-12 flex flex-col items-center ">
+  <ContainerCenter class=" text-center">
+    <h2 class="text-gold font-semibold text-2xl phone-lg:text-3xl laptop:text-5xl">
+      Recuerdos que abrazan el alma
+    </h2>
+    <p class="mt-4 text-base laptop:text-xl text-cinnamon italic max-w-2xl mx-auto">
+      Más que servicios, creamos memorias que te acompañan toda la vida.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8 ">
+      {
+        ourServices.map((service) => (
+          <div class="flex flex-col overflow-hidden h-full">
+            <!-- Imagen alta y atractiva -->
+            <div class="w-full h-96 phone-lg:h-[35rem] tablet:h-64 laptop:h-[30rem]">
+              <Image
+                src={service.urlImage}
+                alt={`foto - ${service.title}`}
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <!-- Título centrado -->
+            <div class="flex-1 px-4 py-10 flex items-center justify-center text-center">
+              <h3 class="text-xl text-cinnamon italic prose-sm">{service.title}</h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </ContainerCenter>
+</section>

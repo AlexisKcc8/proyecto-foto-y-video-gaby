@@ -8,6 +8,11 @@ interface Props extends HTMLAttributes<"section"> {}
 const { class: className } = Astro.props;
 ---
 
-<section class={twMerge("overflow-hidden px-6", className)}>
+<section
+  class={twMerge(
+    "overflow-hidden px-6 phone-lg:max-w-4/5 phone-lg:p-0 tablet:max-w-[90%]  ",
+    className
+  )}
+>
   <slot />
 </section>
