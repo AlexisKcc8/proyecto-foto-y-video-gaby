@@ -6,6 +6,7 @@ import Hero from "@components/sections/Hero.astro";
 import BannerMessage from "@components/sections/BannerMessage.astro";
 import AboutMe from "@components/sections/AboutMe.astro";
 import Services from "@components/sections/Services.astro";
+import { CarouselPhotos } from "@components/CarouselPhotos";
 ---
 
 <Layout>
@@ -13,4 +14,5 @@ import Services from "@components/sections/Services.astro";
   <AboutMe />
   <Services />
   <BannerMessage />
+  <CarouselPhotos client:load />
 </Layout>

@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
         ourServices.map((service) => (
           <div class="flex flex-col overflow-hidden h-full">
             <!-- Imagen alta y atractiva -->
-            <div class="w-full h-96 phone-lg:h-[35rem] tablet:h-64 laptop:h-[30rem]">
+            <div class="w-full h-96 rounded-xl overflow-hidden phone-lg:h-[35rem] tablet:h-64 laptop:h-[30rem]">
               <Image
                 src={service.urlImage}
                 alt={`foto - ${service.title}`}

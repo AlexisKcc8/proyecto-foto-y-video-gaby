@@ -1,13 +1,19 @@
 ---
 import ContainerCenter from "@components/ContainerCenter.astro";
+import { Image } from "astro:assets";
+import linea from "@assets/aboutMe/info-b-vector.svg";
 ---
 
-<section
-  class="w-full flex justify-center items-center laptop:h-[60vh] bg-white-gray"
->
+<section class="w-full flex relative justify-center items-center py-8">
+  <Image
+    src={linea}
+    alt="Foto y Video Gaby"
+    class="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
+  />
   <ContainerCenter
-    class="flex flex-col justify-center items-center text-center p-8 gap-4"
+    class="flex flex-col justify-center items-center text-center gap-4"
   >
+    <h4>♥️✨✨♥️</h4>
     <h2
       class="font-medium text-2xl italic text-gold laptop:w-3/4 laptop:text-5xl"
     >
@@ -19,5 +25,8 @@ import ContainerCenter from "@components/ContainerCenter.astro";
       siente. Cada gesto espontáneo se convierte en parte de una narrativa
       visual auténtica. Ese es el arte: capturar la verdad con belleza.
     </p>
+    <h2 class="text-gold text-xl font-semibold prose-sm">
+      ✨Foto y video gaby✨
+    </h2>
   </ContainerCenter>
 </section>
