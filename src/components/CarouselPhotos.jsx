@@ -12,20 +12,20 @@ import {
 } from "@components/components/ui/carousel";
 
 const images = [
-  "/images/img1.jpg",
-  "/images/img2.JPG",
-  "/images/img3.jpg",
-  "/images/img4.jpg",
+  "/images/img1.webp",
+  "/images/img2.webp",
+  "/images/img3.webp",
+  "/images/img4.webp",
   "/images/img5.webp",
-  "/images/img6.jpg",
-  "/images/img7.jpg",
-  "/images/img8.jpg",
-  "/images/img9.jpg",
+  "/images/img6.webp",
+  "/images/img7.webp",
+  "/images/img8.webp",
+  "/images/img9.webp",
 ];
 
 export function CarouselPhotos() {
   const plugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
@@ -38,13 +38,14 @@ export function CarouselPhotos() {
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="">
           {images.map((src, index) => (
-            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 px-2  ">
+            <CarouselItem key={index} className="basis-auto ">
               <img
                 src={src}
                 alt={`Slide ${index}`}
-                className="w-full h-96 object-cover object-center rounded-xl shadow-md  hover:cursor-pointer tablet:h-[38rem]"
+                loading="lazy"
+                className="w-full h-96 object-cover object-top rounded-xl shadow-md  hover:cursor-pointer tablet:h-[40rem] "
               />
             </CarouselItem>
           ))}
