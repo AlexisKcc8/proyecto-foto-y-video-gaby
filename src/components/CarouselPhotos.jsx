@@ -25,7 +25,7 @@ const images = [
 
 export function CarouselPhotos() {
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 3500, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
