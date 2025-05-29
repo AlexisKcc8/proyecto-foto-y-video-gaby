@@ -1,5 +1,6 @@
 ---
-
+import { testimonials } from "@data/dataTestimonial";
+import { twMerge } from "tailwind-merge";
 ---
 
 <section class="bg-white relative p-4 sm:px-6 lg:px-8" id="testimonios">
@@ -13,86 +14,38 @@
     <p class="text-base text-cinnamon italic mb-4 laptop:text-xl">
       Experiencias reales, recuerdos inolvidables.
     </p>
-    <div class="grid gap-8 lg:grid-cols-2">
-      <!-- Testimonio 1 -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left">
-        <p class="text-gray-700 italic mb-4">
-          “Contraté a Foto y Video Gaby para mi boda y no puedo estar más feliz.
-          Las fotos capturaron cada emoción, y el video es simplemente mágico.
-          Mil gracias por hacerlo tan especial.”
-        </p>
-        <div class="flex items-center gap-4">
-          <div
-            class="bg-pink-100 text-pink-600 rounded-full w-10 h-10 flex items-center justify-center font-bold"
-          >
-            A
-          </div>
-          <div>
-            <p class="font-semibold text-gray-900">Ana López</p>
-            <p class="text-sm text-yellow-500">★★★★★</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonio 2 -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left">
-        <p class="text-gray-700 italic mb-4">
-          “Muy profesionales, puntuales y con excelente calidad. Hicimos una
-          sesión familiar y quedaron recuerdos hermosos que ahora decoran
-          nuestra casa. Los recomiendo al 100%.”
-        </p>
-        <div class="flex items-center gap-4">
-          <div
-            class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center font-bold"
-          >
-            C
-          </div>
-          <div>
-            <p class="font-semibold text-gray-900">Carlos Hernández</p>
-            <p class="text-sm text-yellow-500">★★★★★</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonio 3 -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left">
-        <p class="text-gray-700 italic mb-4">
-          “¡Increíble experiencia! Me sentí muy cómoda durante la sesión de XV
-          años y las fotos quedaron espectaculares. Gracias Gaby por tu
-          paciencia y talento.”
-        </p>
-        <div class="flex items-center gap-4">
-          <div
-            class="bg-purple-100 text-purple-600 rounded-full w-10 h-10 flex items-center justify-center font-bold"
-          >
-            M
-          </div>
-          <div>
-            <p class="font-semibold text-gray-900">Mariana Gutiérrez</p>
-            <p class="text-sm text-yellow-500">★★★★★</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonio 4 -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left">
-        <p class="text-gray-700 italic mb-4">
-          “Desde la sesión previa a la boda hasta el último baile, capturaron
-          todo con un ojo artístico impresionante. ¡Nos hicieron revivir nuestro
-          gran día con cada imagen!”
-        </p>
-        <div class="flex items-center gap-4">
-          <div
-            class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center font-bold"
-          >
-            D
-          </div>
-          <div>
-            <p class="font-semibold text-gray-900">David y Sofía</p>
-            <p class="text-sm text-yellow-500">★★★★★</p>
-          </div>
-        </div>
-      </div>
+    <div class="grid gap-8 tablet:grid-cols-2 laptop:grid-cols-3">
+      {
+        testimonials !== null ? (
+          testimonials.map((testimonial) => (
+            <div
+              class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left"
+              class:list={{
+                "hidden laptop:block": !testimonial.mobileOnly,
+              }}
+            >
+              <p class="text-gray-700 italic mb-4">{testimonial.quote}</p>
+              <div class="flex items-center gap-4">
+                <div
+                  class={twMerge(
+                    "rounded-full w-10 h-10 flex items-center justify-center font-bold",
+                    testimonial.bgColor,
+                    testimonial.textColor
+                  )}
+                >
+                  {testimonial.initial}
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p class="text-sm text-yellow-500">★★★★★</p>
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>no funciona</p>
+        )
+      }
     </div>
   </div>
 </section>
