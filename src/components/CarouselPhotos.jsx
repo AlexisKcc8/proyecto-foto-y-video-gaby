@@ -52,7 +52,7 @@ export function CarouselPhotos() {
                 src={src}
                 alt={`Slide ${index}`}
                 loading="lazy"
-                className="w-full h-96 object-cover object-top rounded-xl shadow-md  hover:cursor-pointer tablet:h-[40rem] "
+                className="w-full h-[30rem] object-cover object-top rounded-xl shadow-md  hover:cursor-pointer tablet:h-[40rem] "
               />
             </CarouselItem>
           ))}
