@@ -29,11 +29,11 @@ export function CarouselPhotos() {
   );
 
   return (
-    <section className="w-full my-12 flex flex-col items-center justify-center ">
-      <h2 className="text-3xl font-semibold tracking-tight text-gold text-center phone-lg:text-4xl">
+    <section className="w-full my-12 flex flex-col items-center justify-center text-center">
+      <h2 className="text-3xl font-semibold tracking-tight text-gold phone-lg:text-4xl">
         "Descubre el arte de capturar momentos."
       </h2>
-      <p class=" text-base laptop:text-xl text-cinnamon italic mb-4">
+      <p class=" text-base text-cinnamon italic mb-4 max-w-4/5 laptop:text-xl">
         Porque los mejores recuerdos no deberían desvanecerse.
       </p>
 
