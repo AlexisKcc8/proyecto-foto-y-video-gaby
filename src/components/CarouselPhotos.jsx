@@ -30,7 +30,7 @@ export function CarouselPhotos() {
 
   return (
     <section className="w-full my-12 flex flex-col items-center justify-center gap-4">
-      <h2 className="text-2xl font-bold text-center text-gray-800 phone-lg:max-w-[70%] my-4 phone-lg:text-3xl laptop:text-5xl">
+      <h2 className="text-2xl font-bold text-center text-gray-800 max-w-4/5 phone-lg:max-w-[70%] my-4 phone-lg:text-3xl laptop:text-5xl">
         "Conoce nuestro trabajo y enamórate del arte de capturar emociones."
       </h2>
       <Carousel
