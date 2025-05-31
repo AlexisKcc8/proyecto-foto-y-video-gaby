@@ -33,7 +33,7 @@ export function CarouselPhotos() {
       <h2 className="text-3xl font-semibold tracking-tight text-gold phone-lg:text-4xl">
         "Descubre el arte de capturar momentos."
       </h2>
-      <p class=" text-base text-cinnamon italic mb-4 max-w-4/5 laptop:text-xl">
+      <p className=" text-base text-cinnamon italic mb-4 max-w-4/5 laptop:text-xl">
         Porque los mejores recuerdos no deberían desvanecerse.
       </p>
 
