@@ -1,6 +1,7 @@
 ---
 import { imgsFooter } from "@data/dataFooter";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <footer class="h-screen">
@@ -13,8 +14,12 @@ import { Image } from "astro:assets";
       <div
         class="absolute top-0 left-0 right-0 bottom-0 m-auto w-4/5 h-1/2 bg-white/80 flex flex-col justify-center items-center gap-2 laptop:gap-4 laptop:w-1/2"
       >
-        <p class="text-gray-600">FACEBOOK SE SIENTE</p>
-        <p class="text-gray-600 prose-sm">síguenos en @FOTO Y VIDEO GABY</p>
+        <p class="text-gray-900">
+          “Hoy es un buen día para empezar a crear recuerdos inolvidables.”
+        </p>
+        <p class="text-gray-800 prose-sm">
+          Tú sueñas el lugar. Nosotros lo capturamos con arte.
+        </p>
       </div>
       {
         imgsFooter !== null ? (
@@ -47,9 +52,17 @@ import { Image } from "astro:assets";
           class="w-3/4 h-48 relative overflow-hidden my-4 text-gray-muted-50"
         >
           <!-- Letras -->
-          <h3 class="absolute top-4 left-1/2 -translate-x-1/2">F</h3>
+          <h3 class="absolute top-4 left-1/2 -translate-x-1/2">
+            <a
+              href="https://www.facebook.com/profile.php?id=100093220946518"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="icon-facebook" class="w-8 h-8 relative z-50" />
+            </a>
+          </h3>
           <h3
-            class="absolute left-8 top-1/2 -translate-y-1/2 text-2xl font-semibold"
+            class="absolute left-8 top-1/2 -translate-y-1/2 text-2xl font-semibold phone-lg:left-24 tablet:left-16 laptop:left-40"
           >
             F
           </h3>
@@ -59,20 +72,20 @@ import { Image } from "astro:assets";
             V
           </h3>
           <h3
-            class="absolute right-8 top-1/2 -translate-y-1/2 text-2xl font-semibold"
+            class="absolute right-8 top-1/2 -translate-y-1/2 text-2xl font-semibold phone-lg:right-24 tablet:right-16 laptop:right-40"
           >
             G
           </h3>
 
           <!-- Línea 1: de top-left a bottom-right -->
           <div
-            class="absolute left-1/2 top-1/2 w-[150%] h-[1px] bg-gray-muted-50 rotate-45 -translate-x-1/2 -translate-y-1/2"
+            class="absolute left-1/2 top-1/2 -z-10 w-[150%] h-[1px] bg-gray-muted-50 rotate-45 -translate-x-1/2 -translate-y-1/2"
           >
           </div>
 
           <!-- Línea 2: de top-right a bottom-left -->
           <div
-            class="absolute left-1/2 top-1/2 w-[150%] h-[1px] bg-gray-muted-50 -rotate-45 -translate-x-1/2 -translate-y-1/2"
+            class="absolute left-1/2 top-1/2 -z-10 w-[150%] h-[1px] bg-gray-muted-50 -rotate-45 -translate-x-1/2 -translate-y-1/2"
           >
           </div>
         </div>

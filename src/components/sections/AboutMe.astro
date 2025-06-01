@@ -3,6 +3,7 @@ import ContainerCenter from "@components/ContainerCenter.astro";
 import { Image } from "astro:assets";
 import señoritaAniversario from "@assets/aboutMe/señorita.webp";
 import linea from "@assets/aboutMe/info-b-vector.svg";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -50,11 +51,19 @@ import linea from "@assets/aboutMe/info-b-vector.svg";
         un ambiente relajado y cercano, para que tú solo disfrutes el momento
         mientras nosotros lo inmortalizamos.
       </p>
+
       <a
-        href="#"
-        class="bg-cinnamon text-white py-4 px-8 rounded-md font-medium z-30 transition laptop:mx-5 hover:cursor-pointer hover:bg-gold-hover"
-        >Nuestro Facebook</a
+        href="https://www.facebook.com/profile.php?id=100093220946518"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-cinnamon text-white py-4 px-8 rounded-md font-medium z-30 transition flex justify-center items-center gap-4 laptop:mx-5 hover:cursor-pointer hover:bg-gold-hover"
       >
+        Nuestro Facebook
+        <Icon
+          name="icon-facebook"
+          class="w-8 h-8 relative z-50 text-gray-700"
+        />
+      </a>
     </aside>
   </ContainerCenter>
 </section>

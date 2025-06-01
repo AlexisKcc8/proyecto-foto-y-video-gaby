@@ -1,9 +1,8 @@
-import catrina from "@assets/footer/catrina.jpg";
-import meztiza from "@assets/footer/mestiza.jpg";
-import niña from "@assets/footer/sesion-niña.jpg";
-import xvAmarillo from "@assets/footer/xv-amarillo.jpg";
-import xvRojo from "@assets/footer/xv-rojo.jpg";
-import xvVerde from "@assets/footer/xv-verde.jpg";
+import catrina from "@assets/footer/catrina.webp";
+import meztiza from "@assets/footer/mestiza.webp";
+import niña from "@assets/footer/sesion-niña.webp";
+import xvAmarillo from "@assets/footer/xv-amarillo.webp";
+import xvVerde from "@assets/footer/xv-verde.webp";
 
 export const imgsFooter = [
   {
