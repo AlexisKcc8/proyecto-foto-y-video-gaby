@@ -2,6 +2,10 @@
 import { imgsFooter } from "@data/dataFooter";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import { twMerge } from "tailwind-merge";
+
+const classLetters =
+  "absolute text-2xl font-semibold rounded-full w-8 h-8 flex items-center justify-center text-gold";
 ---
 
 <footer class="h-screen">
@@ -12,9 +16,9 @@ import { Icon } from "astro-icon/components";
       class="w-full h-full relative flex justify-center items-center overflow-hidden px-[10vw]"
     >
       <div
-        class="absolute top-0 left-0 right-0 bottom-0 m-auto w-4/5 h-1/2 bg-white/80 flex flex-col justify-center items-center gap-2 laptop:gap-4 laptop:w-1/2"
+        class="absolute top-0 left-0 right-0 bottom-0 m-auto w-11/12 h-1/2 bg-white/70 flex flex-col justify-center items-center gap-2 px-6 text-center laptop:gap-4 laptop:w-1/2"
       >
-        <p class="text-gray-900">
+        <p class="text-gray-900 prose-base">
           “Hoy es un buen día para empezar a crear recuerdos inolvidables.”
         </p>
         <p class="text-gray-800 prose-sm">
@@ -44,7 +48,7 @@ import { Icon } from "astro-icon/components";
     </section>
   </section>
   <section
-    class="w-full flex flex-col items-center justify-center phone-lg:min-h-1/2"
+    class="w-full flex flex-col items-center justify-center phone-lg:h-1/2"
   >
     <div class="flex-1 w-full flex flex-col tablet:flex-row">
       <aside class="w-full relative flex justify-center items-center">
@@ -58,21 +62,27 @@ import { Icon } from "astro-icon/components";
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon name="icon-facebook" class="w-8 h-8 relative z-50" />
+              <Icon name="facebook-icon" class="w-8 h-8 relative z-50" />
             </a>
           </h3>
           <h3
-            class="absolute left-8 top-1/2 -translate-y-1/2 text-2xl font-semibold phone-lg:left-24 tablet:left-16 laptop:left-40"
+            class={twMerge(
+              "left-8 top-1/2 -translate-y-1/2 phone-lg:left-24 tablet:left-16 laptop:left-40",
+              classLetters
+            )}
           >
             F
           </h3>
           <h3
-            class="absolute bottom-4 left-1/2 -translate-x-1/2 text-2xl font-semibold"
+            class={twMerge("bottom-4 left-1/2 -translate-x-1/2", classLetters)}
           >
             V
           </h3>
           <h3
-            class="absolute right-8 top-1/2 -translate-y-1/2 text-2xl font-semibold phone-lg:right-24 tablet:right-16 laptop:right-40"
+            class={twMerge(
+              "right-8 top-1/2 -translate-y-1/2 phone-lg:right-24 tablet:right-16 laptop:right-40",
+              classLetters
+            )}
           >
             G
           </h3>
@@ -91,7 +101,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </aside>
       <aside
-        class="w-full flex flex-col justify-center items-center text-center px-4"
+        class="w-full h-full flex flex-col justify-around items-center text-center px-4 pb-2 tablet:justify-center tablet:gap-2"
       >
         <h3 class="text-3xl mb-6 text-gray-700">FOTO Y VIDEO GABY</h3>
         <p class="prose-sm w-3/4 mb-3 text-gray-muted-50">
@@ -104,8 +114,8 @@ import { Icon } from "astro-icon/components";
         </p>
       </aside>
     </div>
-    <div class="bg-gray-100 p-4 w-full text-center">
-      <h3 class="text-gray-muted">Desarrollado por: Alexis🧢Chim</h3>
+    <div class="bg-gray-50 p-4 w-full text-center">
+      <h3 class="text-gold">Desarrollado por: Alexis🧢Chim</h3>
     </div>
   </section>
 </footer>
