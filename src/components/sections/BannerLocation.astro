@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import imgLocation from "@assets/image-location-visit.webp";
+import ButtonLinkWhatsApp from "@components/ButtonLinkWhatsApp.astro";
 ---
 
 <section class="relative w-full min-h-screen">
@@ -20,12 +21,7 @@ import imgLocation from "@assets/image-location-visit.webp";
         Sesiones de fotos donde tú lo sueñas. Foto y Video Gaby viaja contigo
         para capturar tu historia.
       </p>
-      <a
-        href="#contacto"
-        class="bg-gold text-white py-3 px-6 rounded-md hover:bg-gold-hover transition font-medium"
-      >
-        Haz realidad tu sesión soñada
-      </a>
+      <ButtonLinkWhatsApp className="mt-6" title="Agenda tu sesión hoy" />
     </div>
   </div>
 </section>

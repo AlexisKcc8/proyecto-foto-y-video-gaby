@@ -1,4 +1,5 @@
 ---
+import ButtonLinkWhatsApp from "@components/ButtonLinkWhatsApp.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -73,15 +74,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
 
-      <!-- WhatsApp -->
-      <a
-        href="https://wa.me/52XXXXXXXXXX"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow hover:bg-green-600 transition duration-200 mt-6"
-      >
-        Escríbenos por WhatsApp
-      </a>
+      <ButtonLinkWhatsApp className="mt-6" title="Agenda tu sesión hoy" />
     </div>
   </div>
 </section>

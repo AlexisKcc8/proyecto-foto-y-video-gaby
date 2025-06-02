@@ -1,0 +1,34 @@
+---
+import { twMerge } from "tailwind-merge";
+
+const defaultMessage = `¡Hola! 👋 Me gustaría solicitar información sobre los servicios de fotografía y video de Foto y Video Gaby.
+
+Estoy interesado(a) en agendar una sesión y me gustaría saber los paquetes disponibles, precios y disponibilidad.
+
+Quedo atento(a) a su respuesta. ¡Gracias!`;
+
+const defaultTitle = "+Información";
+
+const {
+  message = defaultMessage,
+  title = defaultTitle,
+  className,
+} = Astro.props;
+
+let whatsappLink = `https://wa.me/9971022587?text=${encodeURIComponent(
+  message
+)}`;
+---
+
+<a
+  href={whatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={twMerge(
+    " bg-gold text-white py-4 px-8 rounded-md hover:bg-gold-hover transition font-medium uppercase",
+    className
+  )}
+  class=""
+>
+  {title}
+</a>
