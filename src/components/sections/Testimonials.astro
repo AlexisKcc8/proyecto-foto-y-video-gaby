@@ -7,11 +7,15 @@ import { twMerge } from "tailwind-merge";
   <div class="max-w-7xl mx-auto text-center relative">
     <h2
       class="text-3xl font-semibold tracking-tight text-gold text-center phone-lg:text-4xl mb-2"
+      data-aos="fade-in"
     >
       Lo que nuestros clientes dicen
     </h2>
 
-    <p class="text-base text-cinnamon italic mb-4 laptop:text-xl">
+    <p
+      class="text-base text-cinnamon italic mb-4 laptop:text-xl"
+      data-aos="fade-in"
+    >
       Experiencias reales, recuerdos inolvidables.
     </p>
     <div class="grid gap-8 tablet:grid-cols-2 laptop:grid-cols-3">
@@ -20,6 +24,7 @@ import { twMerge } from "tailwind-merge";
           testimonials.map((testimonial) => (
             <div
               class="bg-gray-50 p-6 rounded-2xl shadow-sm text-left flex flex-col"
+              data-aos="fade-in"
               class:list={{
                 "hidden laptop:block": !testimonial.mobileOnly,
               }}

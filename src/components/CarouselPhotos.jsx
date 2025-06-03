@@ -30,10 +30,16 @@ export function CarouselPhotos() {
 
   return (
     <section className="w-full my-12 flex flex-col items-center justify-center text-center">
-      <h2 className="text-3xl font-semibold tracking-tight text-gold phone-lg:text-4xl">
+      <h2
+        className="text-3xl font-semibold tracking-tight text-gold phone-lg:text-4xl"
+        data-aos="fade-in"
+      >
         "Descubre el arte de capturar momentos."
       </h2>
-      <p className=" text-base text-cinnamon italic mb-4 max-w-4/5 laptop:text-xl">
+      <p
+        className=" text-base text-cinnamon italic mb-4 max-w-4/5 laptop:text-xl"
+        data-aos="fade-in"
+      >
         Porque los mejores recuerdos no deberían desvanecerse.
       </p>
 
@@ -53,6 +59,7 @@ export function CarouselPhotos() {
                 alt={`Slide ${index}`}
                 loading="lazy"
                 className="w-full h-[30rem] object-cover object-top rounded-xl shadow-md  hover:cursor-pointer tablet:h-[40rem] "
+                data-aos="fade-in"
               />
             </CarouselItem>
           ))}

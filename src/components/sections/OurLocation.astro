@@ -7,11 +7,15 @@ import { Icon } from "astro-icon/components";
   <div class="text-center mb-10">
     <h2
       class="text-3xl font-semibold tracking-tight text-gold text-center phone-lg:text-4xl mb-2"
+      data-aos="fade-in"
     >
       ¿Desde dónde trabajamos?
     </h2>
 
-    <p class="text-base text-cinnamon italic mb-4 laptop:text-xl">
+    <p
+      class="text-base text-cinnamon italic mb-4 laptop:text-xl"
+      data-aos="fade-in"
+    >
       Desde Halachó, Yucatán… o donde tú quieras. Tú eliges el lugar, nosotros
       llevamos el lente.
     </p>
@@ -19,7 +23,10 @@ import { Icon } from "astro-icon/components";
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
     <!-- Mapa de Google -->
-    <div class="w-full h-[28rem] rounded-xl overflow-hidden shadow-lg">
+    <div
+      class="w-full h-[28rem] rounded-xl overflow-hidden shadow-lg"
+      data-aos="fade-in"
+    >
       <iframe
         src="https://www.google.com/maps/embed?pb=!4v1748887907714!6m8!1m7!1sA-O1ggDL5CXJeW5X7U_BHA!2m2!1d20.47614183808022!2d-90.08424872265334!3f281.09551312334975!4f-5.71119739705793!5f0.7820865974627469"
         width="100%"
@@ -37,7 +44,7 @@ import { Icon } from "astro-icon/components";
       class="h-full space-y-6 text-left flex flex-col justify-center items-start"
     >
       <!-- Dirección -->
-      <div class="flex items-start gap-4">
+      <div class="flex items-start gap-4" data-aos="fade-up">
         <Icon name="direction-icon" class="w-6 h-6 text-rose-500 shrink-0" />
         <div>
           <p class="font-semibold text-gray-700">Dirección:</p>
@@ -48,7 +55,7 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <!-- Cobertura -->
-      <div class="flex items-start gap-4">
+      <div class="flex items-start gap-4" data-aos="fade-up">
         <Icon name="coverage-icon" class="w-6 h-6 text-blue-500 shrink-0" />
         <div>
           <p class="font-semibold text-gray-700">Cobertura:</p>
@@ -60,7 +67,7 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <!-- Correo electrónico -->
-      <div class="flex items-start gap-4">
+      <div class="flex items-start gap-4" data-aos="fade-up">
         <Icon name="email-icon" class="w-6 h-6 text-purple-500 shrink-0" />
         <div>
           <p class="font-semibold text-gray-700">Correo electrónico:</p>

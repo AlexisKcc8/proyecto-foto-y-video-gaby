@@ -7,17 +7,17 @@ import { Image } from "astro:assets";
 <section class="py-12 flex flex-col items-center ">
   <ContainerCenter class=" text-center">
     
-    <h2 class="text-3xl font-semibold tracking-tight text-gold text-center phone-lg:text-4xl ">
+    <h2 class="text-3xl font-semibold tracking-tight text-gold text-center phone-lg:text-4xl " data-aos="fade-in">
       Recuerdos que abrazan el alma
     </h2>
-    <p class=" text-base laptop:text-xl text-cinnamon italic  mx-auto">
+    <p class=" text-base laptop:text-xl text-cinnamon italic  mx-auto" data-aos="fade-in">
       Más que servicios, creamos memorias que te acompañan toda la vida.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8 ">
       {
         ourServices.map((service) => (
-          <div class="flex flex-col overflow-hidden h-full border-0">
+          <div class="flex flex-col overflow-hidden h-full border-0" data-aos="fade-in">
             <!-- Imagen alta y atractiva -->
             <div class="w-full h-96 relative rounded-xl overflow-hidden phone-lg:h-[35rem] tablet:h-64 laptop:h-[30rem] border-0">
               <Image

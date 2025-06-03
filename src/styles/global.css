@@ -122,7 +122,22 @@ body {
   font-variation-settings: "slnt" 0;
 }
 
+.title-hero {
+  transform: translateY(0.5rem);
+  animation: slideFade 0.8s ease-out forwards;
+}
 
+@keyframes slideFade {
+  0% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -24,3 +24,9 @@ import OurLocation from "@components/sections/OurLocation.astro";
   <Testimonials />
   <Footer />
 </Layout>
+<script>
+  import { initAOS } from "@scripts/aos";
+  document.addEventListener("DOMContentLoaded", () => {
+    initAOS();
+  });
+</script>
